@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
-from math_for_ai.curriculum import CURRICULUM
+from math_for_ai.curriculum import CLASSICAL_CURRICULUM, CURRICULUM
 from math_for_ai.experiments import EXPERIMENTS, run_experiment
 
 
@@ -36,6 +36,7 @@ class MathLabHandler(BaseHTTPRequestHandler):
             self._send_json(
                 {
                     "curriculum": CURRICULUM,
+                    "classicalCurriculum": CLASSICAL_CURRICULUM,
                     "experiments": {
                         name: {
                             key: value
@@ -117,4 +118,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

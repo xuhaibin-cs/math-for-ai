@@ -69,23 +69,30 @@ main { padding: 14px 24px 20px; }
 .curriculum, .experiment, .panel {
   border: 1px solid var(--line); border-radius: 9px; background: var(--panel); overflow: hidden;
 }
-.nav-head { padding: 12px 13px 9px; border-bottom: 1px solid var(--line); }
-.nav-head span { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
-.stage-button, .connection-button {
+.nav-head { padding: 10px 10px 8px; border-bottom: 1px solid var(--line); }
+.chain-switch {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 7px;
+}
+.chain-button {
+  height: 27px; padding: 0 5px; border: 1px solid var(--line); border-radius: 5px;
+  background: #080e17; color: var(--muted); font-size: 9px; cursor: pointer;
+}
+.chain-button.active { border-color: var(--cyan); color: var(--cyan); background: rgba(85,216,255,.08); }
+.stage-button {
   width: 100%; padding: 10px 12px; display: flex; align-items: center; gap: 10px;
   border: 0; border-bottom: 1px solid rgba(38,52,73,.75);
   color: var(--muted); background: transparent; text-align: left; cursor: pointer;
 }
-.stage-button > span, .connection-button > span {
+.stage-button > span {
   width: 25px; color: #607089; font: 700 9px "SFMono-Regular", Consolas, monospace;
 }
-.stage-button strong, .connection-button strong { display: block; color: var(--text); font-size: 11px; }
-.stage-button small, .connection-button small { display: block; margin-top: 2px; font-size: 9px; }
-.stage-button:hover, .stage-button.active, .connection-button:hover, .connection-button.active {
+.stage-button strong { display: block; color: var(--text); font-size: 11px; }
+.stage-button small { display: block; margin-top: 2px; font-size: 9px; }
+.stage-button:hover, .stage-button.active {
   background: linear-gradient(90deg, rgba(85,216,255,.11), transparent);
 }
-.stage-button.active, .connection-button.active { box-shadow: inset 2px 0 var(--cyan); color: var(--cyan); }
-.stage-button.active > span, .connection-button.active > span { color: var(--cyan); }
+.stage-button.active { box-shadow: inset 2px 0 var(--cyan); color: var(--cyan); }
+.stage-button.active > span { color: var(--cyan); }
 
 .experiment { min-width: 0; }
 .experiment-head {
@@ -147,4 +154,3 @@ svg { display: block; width: 100%; height: 280px; }
   svg { height: 235px; }
   .stage-button, .connection-button { padding-top: 8px; padding-bottom: 8px; }
 }
-

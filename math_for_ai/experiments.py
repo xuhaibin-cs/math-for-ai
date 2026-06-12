@@ -5,6 +5,15 @@ from typing import Any, Callable
 import numpy as np
 
 from .calculus import chain_rule_experiment, derivative_experiment
+from .classical_ml import (
+    distance_experiment,
+    evaluation_experiment,
+    logistic_experiment,
+    margin_experiment,
+    pca_experiment,
+    regression_experiment,
+    tree_experiment,
+)
 from .connections import attention_experiment, linear_regression_experiment
 from .information import information_experiment
 from .linear_algebra import demo_matrix, projection, svd_low_rank, transform_grid
@@ -82,6 +91,48 @@ EXPERIMENTS: dict[str, dict[str, Any]] = {
         "formula": "Attention(Q,K,V) = softmax(QKᵀ/√d)V",
         "connection": "Simple mathematical primitives compose into learning algorithms and neural networks.",
         "runner": ai_connections_experiment,
+    },
+    "ml_regression": {
+        "title": "Regression and Regularization",
+        "formula": "w* = argmin ||Xw-y||² + λ||w||²",
+        "connection": "Regression exposes model complexity, overfitting, and regularization in a directly measurable setting.",
+        "runner": regression_experiment,
+    },
+    "ml_logistic": {
+        "title": "Logistic Classification",
+        "formula": "P(y=1|x) = σ(wᵀx+b)",
+        "connection": "Logistic regression turns a linear score into a calibrated probability and a configurable decision boundary.",
+        "runner": logistic_experiment,
+    },
+    "ml_pca": {
+        "title": "PCA and Feature Geometry",
+        "formula": "Σvᵢ = λᵢvᵢ",
+        "connection": "PCA rotates features toward directions of maximum variance, supporting compression, denoising, and exploration.",
+        "runner": pca_experiment,
+    },
+    "ml_distance": {
+        "title": "KNN and K-means",
+        "formula": "d(x,z)=||x-z||₂, μₖ = mean(Cₖ)",
+        "connection": "Distance-based methods learn through neighborhoods or prototypes instead of a global parametric equation.",
+        "runner": distance_experiment,
+    },
+    "ml_tree": {
+        "title": "Decision Trees",
+        "formula": "IG = H(parent) - Σ |Cᵢ|/|C| H(Cᵢ)",
+        "connection": "Trees convert information gain into interpretable piecewise decision rules.",
+        "runner": tree_experiment,
+    },
+    "ml_margin": {
+        "title": "Margins and Kernels",
+        "formula": "L = max(0, 1-y(wᵀx+b))",
+        "connection": "SVMs prefer wide separating margins, while kernels replace explicit features with similarity computations.",
+        "runner": margin_experiment,
+    },
+    "ml_evaluation": {
+        "title": "Evaluation and Generalization",
+        "formula": "AUC = ∫ TPR(FPR) dFPR",
+        "connection": "Evaluation separates fitting from generalization and makes threshold tradeoffs explicit.",
+        "runner": evaluation_experiment,
     },
 }
 

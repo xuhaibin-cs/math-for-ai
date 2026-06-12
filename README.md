@@ -28,6 +28,9 @@ concept -> equation -> NumPy computation -> visualization -> AI application
   stable softmax
 - **AI connections:** linear regression training and scaled dot-product
   attention
+- **Classical machine learning:** polynomial and ridge regression, logistic
+  classification, PCA, KNN, K-means, decision trees, linear SVM, RBF kernels,
+  ROC-AUC, threshold analysis, and cross-validation
 
 ## Start the Lab
 
@@ -60,6 +63,7 @@ MathForAI/
 │   ├── information.py
 │   ├── numerics.py
 │   ├── connections.py
+│   ├── classical_ml.py
 │   ├── curriculum.py
 │   └── experiments.py
 ├── visualizer/
@@ -80,6 +84,31 @@ MathForAI/
 6. Connect cross-entropy and KL divergence to model training.
 7. Study numerical stability before increasing model scale or precision demands.
 8. Rebuild regression and attention from the preceding mathematical pieces.
+9. Enter the Classical ML chain and compare parametric, distance-based,
+   tree-based, and margin-based models.
+10. Finish with evaluation and cross-validation before treating any fitted
+    model as useful.
+
+## Classical Machine Learning Chain
+
+The dashboard contains a second navigation mode named `Classical ML`:
+
+![Classical Machine Learning chain](docs/screenshots/classical-ml-chain.png)
+
+1. **Regression:** polynomial complexity, train/test error, Ridge penalties,
+   coefficient norms, and bias-variance behavior
+2. **Classification:** logistic probabilities, cross-entropy optimization,
+   decision boundaries, and threshold-dependent metrics
+3. **PCA:** covariance, eigenvectors, explained variance, projection, and
+   reconstruction
+4. **Distance methods:** K-nearest neighbors, K-means assignments, centroids,
+   and inertia
+5. **Decision trees:** entropy, candidate thresholds, information gain, and
+   piecewise predictions
+6. **Margins and kernels:** hinge loss, support vectors, maximum-margin
+   geometry, and RBF similarity
+7. **Evaluation:** confusion matrices, precision, recall, F1, ROC-AUC,
+   threshold policy, and K-fold cross-validation
 
 ## Relationship to the Other Projects
 
@@ -105,6 +134,14 @@ The tests cover mathematical invariants, not just code execution:
 - Gaussian density integrates to one.
 - KL divergence is non-negative.
 - Stable softmax handles large logits.
+- Ridge regularization reduces unstable coefficient growth.
+- Logistic regression learns a useful probability boundary.
+- PCA orders axes by explained variance.
+- K-means reduces within-cluster inertia.
+- Decision-tree splits have positive information gain.
+- SVM support vectors lie near the margin.
+- ROC curves are ordered and bounded.
+- Cross-validation returns one score per fold.
 
 ## Further Reading
 

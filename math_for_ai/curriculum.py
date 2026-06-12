@@ -51,3 +51,61 @@ CURRICULUM = [
     },
 ]
 
+CLASSICAL_CURRICULUM = [
+    {
+        "id": "ml_regression",
+        "index": 1,
+        "title": "Regression",
+        "subtitle": "Fit, complexity, regularization",
+        "concepts": ["polynomial features", "least squares", "ridge", "bias-variance"],
+        "aiConnections": ["forecasting", "calibration", "function approximation"],
+    },
+    {
+        "id": "ml_logistic",
+        "index": 2,
+        "title": "Classification",
+        "subtitle": "Probabilities and boundaries",
+        "concepts": ["log odds", "sigmoid", "cross-entropy", "thresholds"],
+        "aiConnections": ["binary decisions", "risk scoring", "linear classifiers"],
+    },
+    {
+        "id": "ml_pca",
+        "index": 3,
+        "title": "PCA",
+        "subtitle": "Feature geometry",
+        "concepts": ["covariance", "principal axes", "projection", "reconstruction"],
+        "aiConnections": ["compression", "denoising", "feature exploration"],
+    },
+    {
+        "id": "ml_distance",
+        "index": 4,
+        "title": "Distance Methods",
+        "subtitle": "KNN and K-means",
+        "concepts": ["distance", "neighbors", "centroids", "inertia"],
+        "aiConnections": ["retrieval", "segmentation", "prototype learning"],
+    },
+    {
+        "id": "ml_tree",
+        "index": 5,
+        "title": "Decision Trees",
+        "subtitle": "Recursive information gain",
+        "concepts": ["entropy", "splits", "information gain", "piecewise rules"],
+        "aiConnections": ["tabular models", "interpretability", "ensembles"],
+    },
+    {
+        "id": "ml_margin",
+        "index": 6,
+        "title": "Margins and Kernels",
+        "subtitle": "SVM geometry",
+        "concepts": ["hinge loss", "maximum margin", "support vectors", "RBF kernel"],
+        "aiConnections": ["robust boundaries", "kernel similarity", "small-data learning"],
+    },
+    {
+        "id": "ml_evaluation",
+        "index": 7,
+        "title": "Evaluation",
+        "subtitle": "Generalization and selection",
+        "concepts": ["confusion matrix", "precision-recall", "ROC-AUC", "cross-validation"],
+        "aiConnections": ["model selection", "threshold policy", "leakage prevention"],
+    },
+]
