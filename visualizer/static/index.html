@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Math for AI Lab</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark">∇</div>
+        <div>
+          <p class="eyebrow">NUMERICAL FOUNDATIONS</p>
+          <h1>Math for AI Lab</h1>
+        </div>
+      </div>
+      <div class="top-stats">
+        <span><strong>6</strong> foundations</span>
+        <span><strong>7</strong> live experiments</span>
+        <span><strong>NumPy</strong> computed</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">EQUATION → GEOMETRY → CODE → MODEL</p>
+          <h2>See the mathematics that makes AI work.</h2>
+          <p>Change a parameter, recompute the experiment, and connect the result to real learning systems.</p>
+        </div>
+        <div id="formulaCard" class="formula-card">
+          <span>ACTIVE EQUATION</span>
+          <strong>Loading...</strong>
+        </div>
+      </section>
+
+      <section class="lab-shell">
+        <nav class="curriculum">
+          <div class="nav-head">
+            <p class="eyebrow">LEARNING PATH</p>
+            <span>Foundations first</span>
+          </div>
+          <div id="curriculum"></div>
+          <button class="connection-button" data-view="connections">
+            <span>07</span>
+            <div><strong>AI Connections</strong><small>Compose the pieces</small></div>
+          </button>
+        </nav>
+
+        <section class="experiment">
+          <div class="experiment-head">
+            <div>
+              <p id="stageLabel" class="eyebrow">STAGE 01</p>
+              <h3 id="experimentTitle">Linear Algebra</h3>
+              <p id="connectionText" class="connection-text"></p>
+            </div>
+            <div id="controls" class="controls"></div>
+          </div>
+
+          <div id="metrics" class="metrics"></div>
+
+          <div class="visual-grid">
+            <section class="panel primary-panel">
+              <div class="panel-head">
+                <div><p class="eyebrow" id="primaryEyebrow">GEOMETRY</p><h4 id="primaryTitle">Linear Transformation</h4></div>
+                <div id="legend" class="legend"></div>
+              </div>
+              <svg id="primaryChart" viewBox="0 0 760 330"></svg>
+            </section>
+
+            <section class="panel secondary-panel">
+              <div class="panel-head">
+                <div><p class="eyebrow" id="secondaryEyebrow">DECOMPOSITION</p><h4 id="secondaryTitle">Singular Values</h4></div>
+              </div>
+              <svg id="secondaryChart" viewBox="0 0 470 330"></svg>
+            </section>
+          </div>
+
+          <section class="panel insight-panel">
+            <div>
+              <p class="eyebrow">WHAT TO NOTICE</p>
+              <p id="insightText"></p>
+            </div>
+            <div id="detailStrip" class="detail-strip"></div>
+          </section>
+        </section>
+      </section>
+      <div id="status" class="status">Loading numerical experiments...</div>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
